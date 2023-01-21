@@ -8,18 +8,12 @@ import plotly.graph_objects as go
 
 import numpy as np
 import pandas as pd
-import json
 
-import datetime as dt
-from datetime import datetime
-import calendar
-
-
-
-
-
+# =====================================================================
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+server= app.server
+# =====================================================================
 path = "Z:/Clientes/WSS/STF/Avaliacao Atuarial/2022/Recebidos/20230119/"
-
 #======================================================================
 
 dist_idade = pd.read_excel(path+'graficos/database/database.xlsx',  engine='openpyxl', sheet_name='dist_idade')
@@ -315,9 +309,6 @@ for degree in [1, 2, 3, 4]:
 
 # =====================================================================
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
-
-# =====================================================================
 # Layout 
 app.layout = dbc.Container(
     children=[
