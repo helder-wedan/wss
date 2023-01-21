@@ -307,7 +307,7 @@ for degree in [1, 2, 3, 4]:
 
     equation = format_coefs(model.coef_.round(2))
     fig8.add_traces(go.Scatter(x=x_range.squeeze(), y=y_poly, name=equation))
-
+fig8.update_layout(height=480, width=960,font_family="Neulis Alt")
 # =====================================================================
 
 # Layout 
