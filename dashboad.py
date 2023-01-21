@@ -5,9 +5,11 @@ from dash.dependencies import Input, Output, ClientsideFunction
 import dash_bootstrap_components as dbc
 import plotly.express as px
 import plotly.graph_objects as go
-
 import numpy as np
 import pandas as pd
+import sklearn
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
 
 # =====================================================================
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
@@ -276,8 +278,7 @@ fig7.update_layout(annotations=annotations)
 #=========================== Gráfico 8 ===========================================
 periodo = [2016,2017,2018,2019,2020,2021,2022]
 
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
+
 
 def format_coefs(coefs):
     equation_list = [f"{coef}x^{i}" for i, coef in enumerate(coefs)]
