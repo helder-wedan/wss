@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 # =====================================================================
-app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
 # =====================================================================
 path = "https://github.com/helder-wedan/wss/blob/main/database.xlsx?raw=true"
