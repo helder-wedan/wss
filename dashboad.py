@@ -10,8 +10,8 @@ import numpy as np
 import pandas as pd
 
 # =====================================================================
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
-server= app.server
+app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+server = app.server
 # =====================================================================
 path = "https://github.com/helder-wedan/wss/blob/main/database.xlsx?raw=true"
 #======================================================================
@@ -416,4 +416,4 @@ def display_status(date, location):
 '''
 
 if __name__ == "__main__":
-    app.run_server(debug=False, port=8051)
+    app.run_server(debug=False)
