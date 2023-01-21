@@ -16,13 +16,13 @@ server = app.server
 path = "https://github.com/helder-wedan/wss/blob/main/database.xlsx?raw=true"
 #======================================================================
 
-dist_idade = pd.read_excel(path,  engine='openpyxl', sheet_name='dist_idade')
-dist_tipo = pd.read_excel(path,  engine='openpyxl', sheet_name='dist_tipo')
-dist_classe = pd.read_excel(path,  engine='openpyxl', sheet_name='dist_classe')
-morbidade_media = pd.read_excel(path,  engine='openpyxl', sheet_name='morbidade_media')
-severidade_media = pd.read_excel(path,  engine='openpyxl', sheet_name='severidade_media')
-morbidade_media_agp = pd.read_excel(path,  engine='openpyxl', sheet_name='morbidade_media_agp')
-severidade_media_agp = pd.read_excel(path,  engine='openpyxl', sheet_name='severidade_media_agp')
+dist_idade = pd.read_excel(path,  sheet_name='dist_idade')
+dist_tipo = pd.read_excel(path,  sheet_name='dist_tipo')
+dist_classe = pd.read_excel(path, sheet_name='dist_classe')
+morbidade_media = pd.read_excel(path, sheet_name='morbidade_media')
+severidade_media = pd.read_excel(path, sheet_name='severidade_media')
+morbidade_media_agp = pd.read_excel(path, sheet_name='morbidade_media_agp')
+severidade_media_agp = pd.read_excel(path, sheet_name='severidade_media_agp')
 
 #=========================== Gráfico 1===========================================
 
